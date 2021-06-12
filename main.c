@@ -55,6 +55,9 @@ int offTemp = 58;       // (degress Celsius) Fan shuts off at this temperature.
 #include <wiringPi.h>   // Needed to set GPIO pins
 
 int main() {
+    
+    
+    ("It's fan manager program"); // my contribute
 
     // Create the fan running check variable
     int fanRunning = 0;
@@ -73,6 +76,8 @@ int main() {
 
     // Create a 'thermal' file to read the actual temp file with
     FILE *thermal;
+    
+    printf("program starting"); // my contribute
     
     openlog ("raspi-fan-manager", LOG_CONS | LOG_PID | LOG_NDELAY, LOG_LOCAL1);
     syslog (LOG_INFO, "Starting: raspi-fan-manager - Version: 0.1.1");
@@ -104,6 +109,9 @@ int main() {
 
             // Turn the fan on
             digitalWrite (fanPin, HIGH);
+            
+            printf("\nCurrent cpu temp is %f\n", sysTemp); // my contributon
+	        printf("starting fan"); // my contribution
 
             // Send message to syslog that the fan is now running
             openlog ("raspi-fan-manager", LOG_CONS | LOG_PID | LOG_NDELAY, LOG_LOCAL1);
@@ -118,6 +126,10 @@ int main() {
 
             // Turn the fan off
             digitalWrite (fanPin, LOW);
+            
+            printf("\nCurrent cpu temp is %f\n", sysTemp); //my contribution
+	        printf("stopping fan"); //my contribution
+
 
             // Send message to syslog that the fan is no longer running
             openlog ("raspi-fan-manager", LOG_CONS | LOG_PID | LOG_NDELAY, LOG_LOCAL1);
