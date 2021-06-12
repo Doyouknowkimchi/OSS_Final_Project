@@ -1,3 +1,27 @@
+Open Source Final project
+
+                                21700268 박세은
+
+What does this project do? 
+	Operate the fan according to the cpu temperature and print out the running status.
+ 
+Why is this project useful? 
+	The proper temperature of Raspberry Pi 4 is recommended to be 0 to 50 degrees, which helps maintain performance. (https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/rpi_DATA_2711_1p0_preliminary.pdf) / 11p
+ 
+How do I get started? 
+	Actually, it's hard to use because the program isn't running properly. You can refer to the readme manual created by the original creator for instructions.
+ 
+Where can I get more help, if I need it?
+ I will study more and improve it later.
+	
+Presentation Video (YouTube) Link
+
+
+-----------------------------------------------
+
+**Below is the original readme.**
+
+
 # Raspberry PI Fan Manager - Version 0.1.1
 
 Copyright 2020 Matt Rude <matt@mattrude.com>
